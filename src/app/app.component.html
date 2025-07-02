@@ -1,44 +1,37 @@
-<h1 class="heading"> Tiffino <img src="assets/Pause GIF image.gif" alt="Welcome GIF" style="height: 80px;" /></h1>
-<div class="navbar">
-  <div class="menu-icon" (click)="toggleSidebar()">☰</div>
-
-  
-  <ul class="lis">
-    <li><a routerLink="/">Home</a></li>
-    <li><a routerLink="/cuisines">Cuisines</a></li>
-     <li><a routerLink="/subscriptions">subscription</a></li>
-    <li><a routerLink="/login">Login</a></li>
-    <li><a routerLink="/register">Register</a></li>
-    <li><a routerLink="/contact">Contact</a></li>
-    <li><a routerLink="/profile">Profile</a></li>
-   <li><a routerLink="/admin-login">Admin Login</a> </li> 
-    <li><a routerLink="/addtocart"><img src="assets/images/Add to cart.jpg" style="height:30px;width:30px;"/></a> </li>
-   <li><a routerLink="/wishlist"><img src="assets/images/wish 1.PNG" style="height:35px;width:35px;"/></a> </li>
-  </ul>
-
-     
-
-  <!-- Sidebar -->
-  <div class="sidebar" [class.open]="isSidebarOpen">
-    <span class="close-btn" (click)="toggleclosin()">×</span>
-    <ul>
-      
-      <li><a routerLink="/foodcart">food-cart</a></li>
-      <li><a routerLink="/mealavailability">meal-availability</a></li>
-      <li><a routerLink="/mealplane">meal-plan</a></li>
-      <li><a routerLink="/membership">membership</a></li>
-      <li><a routerLink="/menu">menu</a></li>
-      <li><a routerLink="/menulist">menu-list</a></li>
-      <li><a routerLink="/ordertrack">order-tracking</a></li>
-      <li><a routerLink="/restaurant">restaurant</a></li>
-       <li><a routerLink="/profile">checkout</a></li>
-          
-      <hr />
-      
-    </ul>
+<header class="header">
+  <div class="left">
+    <img src="assets/Pause GIF image.gif" alt="Tiffino Logo" class="logo" />
+    <span class="brand">Tiffino</span>
   </div>
-</div>
+
+  <nav class="center">
+    <a routerLink="/">Home</a>
+    <a routerLink="/cuisines">Cuisines</a>
+    <a routerLink="/subscriptions">Subscription</a>
+    <a routerLink="/contact">Contact</a>
+    <a routerLink="/login">Login</a>
+    <a routerLink="/register">Register</a>
+ 
+  </nav>
+
+  <div class="right">
+    <a routerLink="/wishlist" title="Wishlist"><i class="fas fa-heart"></i></a>
+    <a routerLink="/addtocart" title="Cart"><i class="fas fa-shopping-cart"></i></a>
+    <a routerLink="/profile" title="Profile"><i class="fas fa-user"></i></a>
+    <div class="menu-toggle" (click)="toggleMenu()">☰</div>
+
+    <div class="menu-dropdown" *ngIf="menuOpen">
+      <a routerLink="/foodcart">Food Cart</a>
+      <a routerLink="/mealavailability">Meal Availability</a>
+      <a routerLink="/mealplan">Meal Plan</a>
+      <a routerLink="/membership">Membership</a>
+      <a routerLink="/menu">Menu</a>
+      <a routerLink="/menulist">Menu List</a>
+      <a routerLink="/ordertracking">Order Tracking</a>
+      <a routerLink="/restaurant">Restaurant</a>
+      <a routerLink="/checkout">Checkout</a>
+    </div>
+  </div>
+</header>
 
 <router-outlet></router-outlet>
-
-

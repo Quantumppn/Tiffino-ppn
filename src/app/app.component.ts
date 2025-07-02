@@ -1,23 +1,29 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { RouterLink } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { Component } from "@angular/core"
+import { RouterOutlet, RouterLink } from "@angular/router"
+import { CommonModule } from "@angular/common"
+import { MenuComponent } from "./menu/menu.component"
+
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   standalone: true,
-  imports: [RouterOutlet,RouterLink,HomeComponent], // <-- Add this line
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  imports: [RouterOutlet, RouterLink, CommonModule, MenuComponent],
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  title = 'Tiffino';
-   isSidebarOpen = false;
-   toggleclose = false;
-  toggleSidebar() {
-    this.isSidebarOpen = !this.isSidebarOpen;
+  title = "Tiffino"
+  menuOpen = false
+  sidebarOpen = false
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen
   }
-   toggleclosin() {
-    this.toggleclose = !this.toggleclose;
-    this.isSidebarOpen = false;
+
+  toggleSidebar() {
+    this.sidebarOpen = !this.sidebarOpen
+  }
+
+  closeSidebar() {
+    this.sidebarOpen = false
   }
 }
