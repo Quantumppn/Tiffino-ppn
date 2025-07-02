@@ -1,7 +1,47 @@
+<<<<<<< HEAD
 <header class="header">
   <div class="left">
     <img src="assets/Pause GIF image.gif" alt="Tiffino Logo" class="logo" />
     <span class="brand">Tiffino</span>
+=======
+<h1 class="heading"> Tiffino <img src="assets/Pause GIF image.gif" alt="Welcome GIF" style="height: 80px;" /></h1>
+<div class="navbar ">
+  <div class="menu-icon" (click)="toggleSidebar()">☰</div>
+
+  
+  <ul class="lis">
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/cuisines">Cuisines</a></li>
+     <li><a routerLink="/subscriptions">subscription</a></li>
+    <li><a routerLink="/login">Login</a></li>
+    <li><a routerLink="/register">Register</a></li>
+    <li><a routerLink="/contact">Contact</a></li>
+    <li><a routerLink="/profile">Profile</a></li>
+   <li><a routerLink="/admin-login">Admin Login</a> </li> 
+    <li><a routerLink="/addtocart"><img src="assets/images/Add to cart.jpg" style="height:30px;width:30px;"/></a> </li>
+   <li><a routerLink="/wishlist"><img src="assets/images/wish 1.PNG" style="height:35px;width:35px;"/></a> </li>
+  </ul>
+
+     
+
+  <!-- Sidebar -->
+  <div class="sidebar" [class.open]="isSidebarOpen">
+    <span class="close-btn" (click)="toggleclosin()">×</span>
+    <ul>
+      
+      <li><a routerLink="/foodcart">food-cart</a></li>
+      <li><a routerLink="/MembershipPlan">membership-plan</a></li>
+      <li><a routerLink="/menu">menu</a></li>
+      <li><a routerLink="/ordertrack">order-tracking</a></li>
+      <li><a routerLink="/offers">offers and rewards</a></li>
+      <li><a routerLink="/restaurant">restaurant</a></li>
+      <li><a routerLink="/checkpayment">checkout</a></li>
+      <li><a routerLink="/review">Rating & Review</a></li>  
+
+      <hr />
+      
+    </ul>
+>>>>>>> a93465fc2550ffd74eca08cdbb708efd4b88e1ac
   </div>
 
   <nav class="center">

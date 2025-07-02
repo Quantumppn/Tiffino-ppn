@@ -2,7 +2,40 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
+<<<<<<< HEAD
 * {
+=======
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  color: #fd8300;
+  margin-left: 50px; /* optional */
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  position: relative;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.menu-icon {
+ position: absolute;
+  left: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #0e0808;
+}
+
+.lis {
+display: flex;
+  list-style: none;
+>>>>>>> a93465fc2550ffd74eca08cdbb708efd4b88e1ac
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -221,9 +254,83 @@ body {
   transition: margin-left 0.3s ease;
 }
 
+<<<<<<< HEAD
 /* Desktop Styles */
 @media (min-width: 1024px) {
   .sidebar {
+=======
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  font-weight: 500;
+}
+
+.sidebar ul li:hover {
+  background-color: #f5e9ea; /* Light pink hover effect */
+  border-radius: 12px;
+}
+.sidebar ul li a:hover {
+  color: #e23744; /* Highlight color on text hover */
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 28px;
+  cursor: pointer;
+  color: rgb(4, 0, 0);
+}
+
+router-outlet {
+  display: block;
+  padding: 10px;
+
+ 
+}
+
+
+
+/* break-------------- */
+
+
+
+/* Card Container - Beautiful 5-column Grid */
+.card-container {
+    display: grid;
+    /* Use grid layout */
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 columns */
+    gap: 25px;
+    /* Spacing between cards */
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    /* Frosted glass effect */
+    margin-bottom: 5%;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 6%;
+    color: #2c0000;
+    /* White text */
+    text-transform: uppercase;
+}
+
+/* Card Styling */
+.restaurant-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+>>>>>>> a93465fc2550ffd74eca08cdbb708efd4b88e1ac
     position: relative;
     transform: translateX(0);
     top: 0;
